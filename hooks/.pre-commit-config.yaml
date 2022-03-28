@@ -16,3 +16,4 @@ repos:
         args: [--max-line-lengt=95, --extend-ignore=E203]
 default_language_version:
     python: python3.10
+    
