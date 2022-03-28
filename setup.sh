@@ -3,11 +3,10 @@ cat  << Intro
 ==================== Environment configuration utility ====================
 1. Installs pre-commit
 2. Downloads .pre-commit-config.yaml
-3. Downloads pyproject.toml
-4. Configures pre-commit
-5. Validates all files in current repo
-6. Adds pre-commit to git
-7. Wishes you bugless code
+3. Configures pre-commit
+4. Validates all files in current repo
+5. Adds pre-commit to git
+6. Wishes you bugless code
 Intro
 echo ""
 
@@ -33,9 +32,6 @@ fi
    
 echo "Downloading pre-commit configuration..."
 $COMMAND -s -o .pre-commit-config.yaml https://raw.githubusercontent.com/marxygen/repostyle/main/hooks/.pre-commit-config.yaml
-
-echo "Downloading project config..."
-$COMMAND -s -o pyproject.toml https://raw.githubusercontent.com/marxygen/repostyle/main/hooks/pyproject.toml
 
 echo "Configuring pre-commit..."
 pre-commit install
