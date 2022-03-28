@@ -3,10 +3,11 @@ cat  << Intro
 ==================== Environment configuration utility ====================
 1. Installs pre-commit
 2. Downloads .pre-commit-config.yaml
-3. Configures pre-commit
-4. Validates all files in current repo
-5. Adds pre-commit to git
-4. Wishes you bugless code
+3. Downloads pyproject.toml
+4. Configures pre-commit
+5. Validates all files in current repo
+6. Adds pre-commit to git
+7. Wishes you bugless code
 Intro
 echo ""
 
