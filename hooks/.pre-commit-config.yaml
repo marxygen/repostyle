@@ -12,9 +12,5 @@ repos:
     rev: 3.8.2
     hooks:
       - id: flake8
-  - repo: 'https://github.com/pre-commit/mirrors-mypy'
-    rev: bdfdfda
-    hooks:
-      - id: mypy
 default_language_version:
     python: python3.10

@@ -18,8 +18,3 @@ exclude = '''
 
 [flake8]
 max-line-length = 79
-
-[tool.mypy]
-exclude = '''(?x)(
-  migrations
-)'
