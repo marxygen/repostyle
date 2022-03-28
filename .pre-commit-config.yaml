@@ -1,0 +1,20 @@
+repos:
+  - repo: 'https://github.com/pre-commit/pre-commit-hooks'
+    rev: v2.4.0
+    hooks:
+      - id: check-ast
+      - id: end-of-file-fixer
+      - id: name-tests-test
+  - repo: 'https://gitlab.com/pycqa/flake8'
+    rev: 3.8.2
+    hooks:
+      - id: flake8
+  - repo: 'https://github.com/psf/black'
+    rev: 19.10b0
+    hooks:
+      - id: black
+      - args: [--skip-string-normalization]
+  - repo: 'https://github.com/pre-commit/mirrors-mypy'
+    rev: bdfdfda
+    hooks:
+      - id: mypy
