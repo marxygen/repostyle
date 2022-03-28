@@ -30,8 +30,11 @@ then
     echo "Switching to wget to download files"
 fi
    
-echo "Copying pre-commit configuration..."
+echo "Downloading pre-commit configuration..."
 $COMMAND -s -o .pre-commit-config.yaml https://raw.githubusercontent.com/marxygen/repostyle/main/hooks/.pre-commit-config.yaml
+
+echo "Downloading project config..."
+$COMMAND -s -o pyproject.toml https://raw.githubusercontent.com/marxygen/repostyle/main/hooks/pyproject.toml
 
 echo "Configuring pre-commit..."
 pre-commit install
