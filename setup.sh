@@ -5,7 +5,7 @@ cat  << Intro
 2. Downloads .pre-commit-config.yaml
 3. Configures pre-commit
 4. Validates all files in current repo
-5. Wishes you bugless code
+5. Wishes you good luck
 Intro
 echo ""
 
