@@ -18,3 +18,5 @@ repos:
     rev: bdfdfda
     hooks:
       - id: mypy
+default_language_version:
+    python: python3.10
