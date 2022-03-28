@@ -15,16 +15,23 @@ set -e
 GIT_FOLDER=$(ls -a | grep .git$)
 
 if ! [ "$GIT_FOLDER" ]
-then 
+then
     echo -e "\e[1;31m You have to be located in your project's root directory (where .git is) \e[0m"
     exit 1
 fi
 
 echo "Installing pre-commit..."
-pip install --user pre-commit --quiet
+pip install pre-commit --quiet
 
+COMMAND="curl.exe"
+if [[ "$uname" == 'Linux' ]]; 
+then
+    COMMAND="wget"
+    echo "Switching to wget to download files"
+fi
+   
 echo "Copying pre-commit configuration..."
-curl.exe .pre-commit-config.yaml
+$COMMAND -s -o .pre-commit-config.yaml https://raw.githubusercontent.com/marxygen/repostyle/main/hooks/.pre-commit-config.yaml
 
 echo "Configuring pre-commit..."
 pre-commit install
@@ -41,6 +48,5 @@ pre-commit run --all-files
 
 echo "Adding to git..."
 git add .pre-commit-config.yaml
-echo "Added to git, remember to commit!"
 
 echo "Good luck using your new environment!"
