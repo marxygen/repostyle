@@ -5,8 +5,7 @@ cat  << Intro
 2. Downloads .pre-commit-config.yaml
 3. Configures pre-commit
 4. Validates all files in current repo
-5. Adds pre-commit to git
-6. Wishes you bugless code
+5. Wishes you bugless code
 Intro
 echo ""
 
@@ -45,8 +44,5 @@ fi
 
 echo "Validating existing files..."
 pre-commit run --all-files
-
-echo "Adding to git..."
-git add .pre-commit-config.yaml
 
 echo "Good luck using your new environment!"
